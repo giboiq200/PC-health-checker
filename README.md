@@ -1,46 +1,37 @@
-````markdown
-# System Health Monitoring Script (PowerShell)
+# 🖥️ System Health Monitoring Script (PowerShell)
 
-This PowerShell script performs a basic system health check on a Windows machine.  
-It is designed as a mini project to showcase system monitoring and scripting skills, suitable for IT support, system administration, or network operations roles.
+A simple yet powerful PowerShell script to monitor the health of a Windows system.  
+---
+
+## ⚡ Features
+
+- **Disk Usage Check** – Monitors C: drive usage and flags if over 80%.  
+- **Memory Usage Check** – Calculates the percentage of used RAM.  
+- **Service Status Check** – Checks if the Print Spooler service is running.  
+- **Logging** – Saves all results to `health_log.txt` with timestamps for future reference.  
 
 ---
 
-## Features
+## 🚀 How to Run
 
-- **Disk Usage Check** – checks C: drive usage and warns if over 80%  
-- **Memory Usage Check** – calculates the percentage of used RAM  
-- **Service Status Check** – verifies if the Print Spooler service is running  
-- **Logging** – outputs results to both the console and a log file (`health_log.txt`) with timestamps
-
----
-
-## How to Run
-
-1. Open **PowerShell** on your Windows machine.
-2. Navigate to the folder containing the script.
-3. If needed, allow script execution:
+1. Open **PowerShell** and navigate to the folder containing the script.  
+2. Allow script execution if necessary:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-````
 
-4. Run the script:
-
-```powershell
-.\health_check.ps1
 ```
+3. **Run the script**:
+```
+.\health_check.ps1
 
-5. Check the log file:
-
+```
+4. **Check the generated log file**:
 ```
 health_log.txt
 ```
 
----
-
-## Example Output
-
+📊 **Example Output**
 ```
 === System Health Check ===
 Date: 01/07/2026 19:36:29
@@ -51,8 +42,12 @@ SERVICE Spooler: RUNNING
 
 Health check complete. Log saved to .\health_log.txt
 ```
+🌟 **Optional Enhancements**
+```
+Add multiple service or disk checks.
 
----
+Include CPU usage monitoring.
 
+Implement automatic alerts for critical statuses (e.g., email or notifications).
 
-
+Make it cross-platform for Linux/Windows environments.
